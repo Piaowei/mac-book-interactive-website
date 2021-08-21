@@ -49,7 +49,10 @@ function cuponPrice() {
 	cuponValue = document.getElementById("cupon-input");
 	const cuponText = cuponValue.value;
 	if (cuponText == "stevekaku") {
-		document.getElementById("last-amount").innerText = parseFloat(100);
+		let lastAmount = parseFloat(document.getElementById("last-amount").innerText);
+		const discountAmount = (lastAmount / 100) * 20;
+		const totaldiscountAmount = lastAmount - discountAmount;
+		document.getElementById("last-amount").innerText = totaldiscountAmount;
 	}
 	cuponValue.value = '';
 }
