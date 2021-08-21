@@ -6,15 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<!-- bootstrap link -->
+	<!-- bootstrap css style link -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
-	<header>
-
-	</header>
 
 	<main>
 		<section>
@@ -27,14 +24,16 @@
 					</div>
 					<div class="col-7 ps-5">
 						<h2>Customize your Blue 24-inch iMac with Apple M1 chip</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aspernatur assumenda
-							asperiores natus quam id dolorem veniam ipsam quibusdam at modi sunt, dicta repellat odit
-							earum laudantium. Rerum, ipsam illum.</p>
+						<p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU,
+							and 16-core Neural Engine 8GB unified memory 256GB SSD storage Two Thunderbolt USB 4 ports
+							Magic Mouse Magic Keyboard-US English.</p>
+
 						<!-- Memory -->
 						<div class=" my-5">
 							<p class="fw-bold ">Memory</p>
 							<button id="8gb-memory" class="btn btn-outline-dark">"8gb unified memory"</button>
 							<button id="16gb-memory" class="btn btn-outline-dark">"16gb unified memory"</button>
+
 							<!-- Storge -->
 						</div>
 						<div class=" my-5">
@@ -43,6 +42,7 @@
 							<button id="512gb-storge-btn" class="btn btn-outline-dark">"512 gb SSD storge"</button>
 							<button id="1tb-storge-btn" class="btn btn-outline-dark">"1 TB SSD storge"</button>
 						</div>
+
 						<!-- Delevery Option -->
 						<div class=" my-5">
 							<p class="fw-bold lh-1">Choose your delevary option </p>
@@ -55,6 +55,7 @@
 									charge $30"</button>
 							</div>
 						</div>
+
 						<!-- Cost -->
 						<div class="col-6">
 							<div class="row row-cols-12">
@@ -63,7 +64,7 @@
 									Best price
 								</div>
 								<div class="col-2 fw-bold ">
-									$1299
+									$<span id="best-amount">1299</span>
 								</div>
 								<hr>
 								<!-- 2nd -->
@@ -98,8 +99,7 @@
 									$<span id="total-amount">0</span>
 								</div>
 								<hr>
-								<!-- / All cost -->
-
+								<!-- / All cost end -->
 							</div>
 
 							<!-- Add promocode -->
@@ -108,9 +108,7 @@
 								<input id="cupon-input" class="py-1 rounded" type="text"> <button id="cupon-btn"
 									class="btn btn-danger">Apply</button>
 							</div>
-
-
-							<!-- / Add promocode -->
+							<!-- / Add promocode end -->
 
 						</div>
 
@@ -124,9 +122,10 @@
 		<h1 class="text-center lh-1">Total: $<span id="last-amount">1299</span></h1>
 	</footer>
 
-	<!-- bootstrp js -->
+	<!-- js code -->
 	<script src="js/mac-book.js"></script>
 
+	<!-- bootstrp js -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
