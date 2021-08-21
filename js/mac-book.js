@@ -1,20 +1,13 @@
 function memoryCost(isprice) {
 	if (isprice) {
-
 		// const memoryDisplayCost = parseInt(document.getElementById("8gb-amount").innerText);
 		document.getElementById("memory-amount").innerText = parseInt(0);
+
 	}
 	else {
 		document.getElementById("memory-amount").innerText = parseInt(180);
+
 	}
-
-	// let a = 0;
-	// for (i = 0; i >= a; i++) {
-	// 	a = a + 1;
-	document.getElementById("total-amount").innerText = totalPrice();
-	// }
-
-
 
 }
 
@@ -32,7 +25,6 @@ function storgeCost(isStorge, anotherStorge) {
 	}
 }
 
-
 function deleveryCost(delevered) {
 	if (delevered) {
 		document.getElementById("delevery-amount").innerText = parseInt(0);
@@ -46,37 +38,58 @@ function totalPrice() {
 	const memoryCost = parseInt(document.getElementById("memory-amount").innerText);
 	const storgeCost = parseInt(document.getElementById("storge-amount").innerText);
 	const deleveryCost = parseInt(document.getElementById("delevery-amount").innerText);
-	let totalPrice = parseInt(memoryCost + storgeCost + deleveryCost);
-	return totalPrice;
-	// document.getElementById("total-amount").innerText = totalPrice;
+	let totalPrice = parseInt(1299 + memoryCost + storgeCost + deleveryCost);
+	document.getElementById("total-amount").innerText = totalPrice;
+	document.getElementById("last-amount").innerText = totalPrice;
+
+
+}
+
+function cuponPrice() {
+	document.getElementById("cupon-input").Value;
+	// if (document.getElementById("cupon-input").Value == "stevekaku") {
+	// 	const cupon = parseFloat(document.getElementById("last-amount").innerText) / 20;
+	document.getElementById("cupon-input").Value = "";
+	// }
 }
 
 
 // even handler memory 8gb
+// ------------------------
 
 document.getElementById("8gb-memory").addEventListener("click", function () {
 	memoryCost(true);
+	totalPrice();
+
+
+
 })
 // even handler memory 16gb
 
 document.getElementById("16gb-memory").addEventListener("click", function () {
 	memoryCost(false);
+	totalPrice();
+
+
 })
 
 // -----------
 // even handler storge 256gb SSD
 document.getElementById("256gb-storge-btn").addEventListener("click", function () {
 	storgeCost(false, true);
+	totalPrice();
 })
 
 
 // even handler storge 512gb SSD
 document.getElementById("512gb-storge-btn").addEventListener("click", function () {
 	storgeCost(false);
+	totalPrice();
 })
 // even handler storge 1TB SSD
 document.getElementById("1tb-storge-btn").addEventListener("click", function () {
 	storgeCost(true);
+	totalPrice();
 
 })
 
@@ -84,7 +97,14 @@ document.getElementById("1tb-storge-btn").addEventListener("click", function () 
 
 document.getElementById("free-delevery-btn").addEventListener("click", function () {
 	deleveryCost(true);
+	totalPrice();
 })
 document.getElementById("costly-delevery-btn").addEventListener("click", function () {
 	deleveryCost(false);
+	totalPrice();
+})
+
+document.getElementById("cupon-btn").addEventListener("click", function (event) {
+	console.log(document.getElementById("cupon-btn"));
+	cuponPrice();
 })
