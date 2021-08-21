@@ -46,11 +46,12 @@ function totalPrice() {
 }
 
 function cuponPrice() {
-	document.getElementById("cupon-input").Value;
-	// if (document.getElementById("cupon-input").Value == "stevekaku") {
-	// 	const cupon = parseFloat(document.getElementById("last-amount").innerText) / 20;
-	document.getElementById("cupon-input").Value = "";
-	// }
+	cuponValue = document.getElementById("cupon-input");
+	const cuponText = cuponValue.value;
+	if (cuponText == "stevekaku") {
+		document.getElementById("last-amount").innerText = parseFloat(100);
+	}
+	cuponValue.value = '';
 }
 
 
@@ -104,7 +105,7 @@ document.getElementById("costly-delevery-btn").addEventListener("click", functio
 	totalPrice();
 })
 
-document.getElementById("cupon-btn").addEventListener("click", function (event) {
-	console.log(document.getElementById("cupon-btn"));
+document.getElementById("cupon-btn").addEventListener("click", function () {
+	// console.log(document.getElementById("cupon-btn"));
 	cuponPrice();
 })
